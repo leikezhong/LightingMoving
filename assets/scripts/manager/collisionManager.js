@@ -7,8 +7,8 @@ cc.Class({
     initCollision:function(){
         var manager = cc.director.getCollisionManager();
         manager.enabled = true;
-        manager.enabledDebugDraw = true;
-        manager.enabledDrawBoundingBox = true;
+        // manager.enabledDebugDraw = true;
+        // manager.enabledDrawBoundingBox = true;
     },
 
     step:function(){
