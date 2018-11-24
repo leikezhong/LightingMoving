@@ -25,7 +25,6 @@ cc.Class({
             battle[this.allManager[i]] = new manager();
             battle[this.allManager[i]].init();
         }
-        
     },
 
     wxInfo:function(){

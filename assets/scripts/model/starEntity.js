@@ -17,15 +17,15 @@ cc.Class({
 
         this.particleSystem = this.starParticle.getComponent(cc.ParticleSystem);
 
-        this.startEmissionRate = 10;
-        this.startParticleCount = 20;
-        this.startGravity = cc.p(0, -300);
+        // this.startEmissionRate = 10;
+        // this.startParticleCount = 20;
+        // this.startGravity = cc.p(0, -300);
 
-        this.particleSystem.emissionRate = this.startEmissionRate;
-        this.particleSystem.particleCount = this.startParticleCount;
-        this.particleSystem.gravity = this.startGravity;
+        // this.particleSystem.emissionRate = this.startEmissionRate;
+        // this.particleSystem.particleCount = this.startParticleCount;
+        // this.particleSystem.gravity = this.startGravity;
 
-        this.startSize = 40;
+        // this.startSize = 40;
         this.startColor = new cc.Color(255,255,255,255);//白
         this.startColorVar = new cc.Color(0,0,0,255);//黑
         this.endColorVar = new cc.Color(0,0,0,255);//黑
@@ -72,6 +72,7 @@ cc.Class({
     },
 
     addParameter:function(other){
+        battle.battleManager.gameOver();
         this.setDead();
         return;
         console.log("add parameter")

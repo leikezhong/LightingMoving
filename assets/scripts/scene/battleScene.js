@@ -37,6 +37,18 @@ cc.Class({
         battle.enterFrameManager.initEnterFrame();
         battle.collisionManager.initCollision();
         battle.battleManager.initBattle();
+
+
+        var agent = anysdk.agentManager;
+        var ads_plugin = agent.getAdsPlugin();
+        ads_plugin.setListener(this.onAdsResult, this);
+        if (ads_plugin.isAdTypeSupported(anysdk.AdsType.AD_TYPE_BANNER) ) {
+            ads_plugin.showAds(anysdk.AdsType.AD_TYPE_BANNER);
+        }
+    },
+
+    onAdsResult:function(code, msg){
+        console.log("ads result, resultcode:"+code+", msg: "+msg);
     },
 
     update:function(dt){
